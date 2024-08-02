@@ -99,7 +99,7 @@ class Vehicle2D(object):
         prev_error = self.compute_error(track)
         cumulative_error = 0
         for _ in range(n):
-            current_error = self.compute_error(track)
+            current_error = self.compute_error(track) #PID controll right here
             cumulative_error += current_error
             diff = current_error - prev_error
             prev_error = current_error
@@ -115,7 +115,7 @@ class Vehicle2D(object):
 
 vehicle = Vehicle2D()
 vehicle.set(0, 1, 0)
-vehicle.set_steering_drift(10/180.*np.pi)
+vehicle.set_steering_drift(10/180.*np.pi) #This provides the error
 
 track_length = 1000
 targets = []; track_x = []; track_y = []

@@ -13,14 +13,14 @@ def sigmoid(x):
 x = np.arange(-10., 10., 0.2)
 sig = sigmoid(x)
 
-fig = plt.figure()
-ax1 = fig.add_subplot(1, 3, 1)
+fig = plt.figure() #generates figure window
+ax1 = fig.add_subplot(1, 3, 1) #Plot multiple graphs in one subplot
 # Plot without customization
 plt.plot(x,sig, linewidth = 3)
 
-ax2 = fig.add_subplot(1, 3, 2)
+ax2 = fig.add_subplot(1, 3, 2) #One row, three collums, second subplot: [][x][]
 # Move left y-axis and bottim x-axis to centre
-ax2.spines['left'].set_position('center')
+ax2.spines['left'].set_position('center') #spines are the axes
 ax2.spines['bottom'].set_position('center')
 # Eliminate upper and right axes
 ax2.spines['right'].set_color('none')

@@ -24,7 +24,7 @@ axamp = plt.axes([0.25, 0.15, 0.65, 0.03], facecolor=axcolor)
 sfreq = Slider(axfreq, 'Freq', 0.1, 30.0, valinit=f0, valstep=delta_f)
 samp = Slider(axamp, 'Amp', 0.1, 10.0, valinit=a0, valstep=delta_a)
 
-# slider update actions
+# slider update actions (how the sliders work)
 def update(val):
     amp = samp.val
     freq = sfreq.val
@@ -35,7 +35,7 @@ sfreq.on_changed(update)
 samp.on_changed(update)
 
 # Create a radio button
-rax = plt.axes([0.025, 0.5, 0.15, 0.15], facecolor=axcolor)
+rax = plt.axes([0.025, 0.5, 0.015, 0.15], facecolor=axcolor) #x coordinate, y coordinate(from bottom), 
 radio = RadioButtons(rax, ('red', 'blue', 'green'), active=0)
 l.set_color(radio.value_selected)
 # radio button update actions

@@ -1,0 +1,15 @@
+from mpl_toolkits import mplot3d
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+
+v = np.array([2.,2.,4.])
+e0 = np.array([1., 0., 0.])
+e1 = np.array([0., 1., 0.])
+e2 = np.array([0., 0., 1.])
+project0 = np.dot(v, e0)
+project1 = np.dot(v, e1)
+project2 = np.dot(v, e2)
+
+print(project0, project1, project2)
